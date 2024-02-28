@@ -12,17 +12,18 @@
                 <v-icon class="right" icon="mdi-exit-to-app"></v-icon>
             </v-btn>
         </v-toolbar>
-        <!-- <Dashboard></Dashboard>-->
         <v-navigation-drawer v-app v-model="drawer" class="bg-transparent ">
+            <Dashboard></Dashboard>
+
         </v-navigation-drawer>
     </nav>
 </template>
 
 <script>
-// import Dashboard from './DashboardComponent.vue';
+import Dashboard from './DashboardComponent.vue';
 
 export default {
-    // components: { Dashboard },
+    components: { Dashboard },
     data() {
         return {
             drawer: false
@@ -30,3 +31,5 @@ export default {
     }
 }
 </script>
+<!-- Hola soy Rawy -->
+<!-- Hola soy Angel  -->

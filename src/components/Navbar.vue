@@ -12,18 +12,24 @@
                 <v-icon class="right" icon="mdi-exit-to-app"></v-icon>
             </v-btn>
         </v-toolbar>
-        <v-navigation-drawer v-app v-model="drawer" class="bg-transparent ">
-            <Dashboard></Dashboard>
-
-        </v-navigation-drawer>
+        <div class="d-md-none d-lg-flex">
+            <DashboardMovil></DashboardMovil>
+        </div>
+        <div class="d-lg-none d-xl-none">
+            <v-navigation-drawer permanent v-app v-model="drawer">
+                <Dashboard></Dashboard>
+                <!-- <main style="height: 100vh"></main> -->
+            </v-navigation-drawer>
+        </div>
     </nav>
 </template>
 
 <script>
+import DashboardMovil from '@/components/vista en movil/DashboardMovil.vue';
 import Dashboard from './DashboardComponent.vue';
 
 export default {
-    components: { Dashboard },
+    components: { Dashboard,DashboardMovil },
     data() {
         return {
             drawer: false
@@ -31,6 +37,3 @@ export default {
     }
 }
 </script>
-<!-- Hola soy Rawy -->
-<!-- Hola soy Angel Ocaña Arguelles  -->
-<!-- Hola soy Roberto GA-->

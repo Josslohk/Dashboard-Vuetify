@@ -1,18 +1,19 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="home" style="margin-left: 60px;">
+    <h1>Homepage</h1>
+    <v-btn prepend-icon="mdi-check-circle">
+      <template v-slot:prepend>
+          <v-icon color="success"></v-icon>
+      </template>
+      Button
+    </v-btn>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { defineComponent } from 'vue';
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-}
+export default defineComponent({
+
+});
 </script>

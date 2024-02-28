@@ -37,6 +37,4 @@ export default {
     }
 }
 </script>
-<!-- Hola soy Rawy -->
-<!-- Hola soy Angel Ocaña Arguelles  -->
-<!-- Hola soy Roberto GA-->
+<!-- Alonsho -->

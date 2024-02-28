@@ -11,15 +11,18 @@
 
         <v-divider></v-divider>
 
-        <v-list density="compact" nav>
+        <v-list :lines="false" density="compact" nav permanent>
             <v-list-item title="Opciones" value="opciones"></v-list-item>
-            <v-list-item prepend-icon="mdi-folder" title="Datos Generales" value=""></v-list-item>
-            <v-list-item prepend-icon="mdi-calendar" title="Horarios" value=""></v-list-item>
-            <v-list-item prepend-icon="mdi-star" title="Calificaciones" value=""></v-list-item>
-            <v-list-item prepend-icon="mdi-folder" title="Kardex" value=""></v-list-item>
-            <v-list-item prepend-icon="mdi-account-multiple" title="Reinscripción" value=""></v-list-item>
-            <v-list-item prepend-icon="mdi-star" title="Pagos" value=""></v-list-item>
+            <v-list-item v-for="(item, i) in items" :key="i" :value="items" color="black">
+                <template v-slot:prepend>
+                    <v-icon :icon="item.icon"></v-icon>
+                </template>
+
+                <v-list-item-title v-text="item.text"></v-list-item-title>
+            </v-list-item>
         </v-list>
+
+
         <template v-slot:append>
             <div>
                 <v-list-item prepend-icon="mdi-exit-to-app" class="bg-red-darken-4">
@@ -35,8 +38,13 @@
 export default {
     data: () => ({
         items: [
-            { title: 'Click Me' },
-
+            { text: 'Datos Generales', icon: 'mdi-folder' },
+            { text: 'Horarios', icon: 'mdi-calendar-account-outline' },
+            { text: 'Calificaciones', icon: 'mdi-book-education' },
+            { text: 'Kardex', icon: 'mdi-school' },
+            { text: 'Reinscripcion', icon: 'mdi-account-group' },
+            { text: 'Pago de servicios', icon: 'mdi-account-cash' },
+            { text: 'Encuesta de carga', icon: 'mdi-poll' },
         ],
     }),
 }
